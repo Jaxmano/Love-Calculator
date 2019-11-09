@@ -9,10 +9,10 @@ function done(){
         let name1 = document.getElementById("firstname").value;
         let name2 = document.getElementById("secondname").value;
 
-        while (name1.length > name2.length&& name1.length==0 && name2.length==0){ // if the first name is longer than the second
+        while (name1.length > name2.length || name1.length==0 || name2.length==0){ // if the first name is longer than the second
             name2 = name2 + "a"; // adds e's until the strings are the same length
         }
-        while (name2.length > name1.length&& name1.length==0 && name2.length==0) { // if the second name is longer than the first
+        while (name2.length > name1.length || name1.length==0 || name2.length==0) { // if the second name is longer than the first
             name1 = name1 + "a"; // adds e's until the strings are the same length
         }
 
