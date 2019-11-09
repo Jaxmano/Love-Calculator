@@ -8,12 +8,14 @@ function done(){
 
         let name1 = document.getElementById("firstname").value;
         let name2 = document.getElementById("secondname").value;
-
-        while (name1.length > name2.length || name1.length==0 || name2.length==0){ // if the first name is longer than the second
-            name2 = name2 + "a"; // adds e's until the strings are the same length
-        }
-        while (name2.length > name1.length || name1.length==0 || name2.length==0) { // if the second name is longer than the first
-            name1 = name1 + "a"; // adds e's until the strings are the same length
+        
+        if (name1.length != 0 && name2.length != 0) {
+                while (name1.length > name2.length){ // if the first name is longer than the second
+                    name2 = name2 + "a"; // adds e's until the strings are the same length
+                }
+                while (name2.length > name1.length) { // if the second name is longer than the first
+                    name1 = name1 + "a"; // adds e's until the strings are the same length
+                }
         }
 
         for (let i = 0; i < name1.length; i++){ // goes through every letter in the first name
